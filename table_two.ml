@@ -10,7 +10,7 @@ let rec eval = fun a_ass b_ass expr -> match expr with
         | Not e -> not (eval a_ass b_ass e)
         | And (e1, e2) -> (eval a_ass b_ass e1) && (eval a_ass b_ass e2)
         | Or  (e1, e2) -> (eval a_ass b_ass e1) || (eval a_ass b_ass e2)
-        | Var _ -> failwith "Unknown Var";;
+        | Var _ -> a_ass;;
 
 
 let table_two = fun a b expr ->  

@@ -1,3 +1,7 @@
+type 'a binary_tree = 
+        | Empty
+        | Node of 'a * 'a binary_tree * 'a binary_tree
+
 let rec comparator_tree tree e cmp = match tree with
         | Empty -> Node(e, Empty, Empty)
         | Node(root, l, r) -> if cmp root e then
